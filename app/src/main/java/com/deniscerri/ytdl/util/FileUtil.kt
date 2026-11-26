@@ -474,7 +474,7 @@ object FileUtil {
     }
 
     fun getDefaultApplicationPath() : String {
-        return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)?.absolutePath + File.separator + "YTDLnis"
+        return Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)?.absolutePath + File.separator + "LOKA"
     }
 
     fun getDownloadArchivePath(context: Context) : String {
