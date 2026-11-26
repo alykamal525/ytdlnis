@@ -226,7 +226,7 @@ class UpdateUtil(var context: Context) {
     }
 
     companion object {
-        const val RELEASES_URL = "https://api.github.com/repos/deniscerri/ytdlnis/releases"
+        const val RELEASES_URL = "https://api.github.com/repos/alykamal525/ytdlnis/releases"
         const val APP_LAST_CHECK_KEY = "app_last_update_check"
         const val YTDLP_LAST_CHECK_KEY = "ytdlp_last_update_check"
         var updatingYTDL = false
