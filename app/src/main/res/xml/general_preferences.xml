@@ -30,14 +30,14 @@
             android:entries="@array/accents"
             android:entryValues="@array/accents_values"
             android:icon="@drawable/baseline_color_lens_24"
-            app:defaultValue="monochrome"
+            app:defaultValue="orange"
             app:key="theme_accent"
             app:summary="Blue"
             app:title="@string/accents" />
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
-            app:defaultValue="true"
+            app:defaultValue="false"
             android:icon="@drawable/baseline_invert_colors_24"
             android:key="high_contrast"
             app:summary="@string/pure_theme_summary"
