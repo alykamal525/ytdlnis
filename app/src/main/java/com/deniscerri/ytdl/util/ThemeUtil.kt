@@ -97,7 +97,7 @@ object ThemeUtil {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity)
 
         //update accent
-        when (sharedPreferences.getString("theme_accent","blue")) {
+        when (sharedPreferences.getString("theme_accent","monochrome")) {
             "Default" -> {
                 DynamicColors.applyToActivityIfAvailable(activity)
                 activity.setTheme(R.style.BaseTheme)
@@ -112,9 +112,9 @@ object ThemeUtil {
         }
 
         //high contrast theme
-        if (sharedPreferences.getBoolean("high_contrast",false)) {
+        if (sharedPreferences.getBoolean("high_contrast",true)) {
             // Pure.<Accent> also re-tints the surface containers on pure black/white; generic Pure is for dynamic colors
-            val pureStyle = when (sharedPreferences.getString("theme_accent","blue")) {
+            val pureStyle = when (sharedPreferences.getString("theme_accent","monochrome")) {
                 "blue" -> R.style.Pure_Blue
                 "red" -> R.style.Pure_Red
                 "green" -> R.style.Pure_Green
@@ -127,7 +127,7 @@ object ThemeUtil {
             activity.theme.applyStyle(pureStyle, true)
         }
 
-        val theme = sharedPreferences.getString("ytdlnis_theme", "System")!!
+        val theme = sharedPreferences.getString("ytdlnis_theme", "Dark")!!
         when (theme) {
             "Light" -> {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
@@ -165,7 +165,7 @@ object ThemeUtil {
     fun getStyledAppName(context: Context): Spanned {
         val colorPrimary = getThemeColor(context, androidx.appcompat.R.attr.colorPrimaryDark)
         val hexColor = "#%06X".format(0xFFFFFF and colorPrimary)
-        return "<span  style='color:$hexColor';>YTDL</span>nis"
+        return "<span  style='color:$hexColor';>LOKA</span> DOWNLOADER"
             .parseAsHtml(HtmlCompat.FROM_HTML_MODE_COMPACT)
     }
 
