@@ -97,7 +97,7 @@ object ThemeUtil {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(activity)
 
         //update accent
-        when (sharedPreferences.getString("theme_accent","monochrome")) {
+        when (sharedPreferences.getString("theme_accent","orange")) {
             "Default" -> {
                 DynamicColors.applyToActivityIfAvailable(activity)
                 activity.setTheme(R.style.BaseTheme)
@@ -112,9 +112,9 @@ object ThemeUtil {
         }
 
         //high contrast theme
-        if (sharedPreferences.getBoolean("high_contrast",true)) {
+        if (sharedPreferences.getBoolean("high_contrast",false)) {
             // Pure.<Accent> also re-tints the surface containers on pure black/white; generic Pure is for dynamic colors
-            val pureStyle = when (sharedPreferences.getString("theme_accent","monochrome")) {
+            val pureStyle = when (sharedPreferences.getString("theme_accent","orange")) {
                 "blue" -> R.style.Pure_Blue
                 "red" -> R.style.Pure_Red
                 "green" -> R.style.Pure_Green
