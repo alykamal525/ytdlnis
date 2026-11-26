@@ -37,7 +37,7 @@
 
         <SwitchPreferenceCompat
             android:widgetLayout="@layout/preferece_material_switch"
-            app:defaultValue="false"
+            app:defaultValue="true"
             android:icon="@drawable/baseline_invert_colors_24"
             android:key="high_contrast"
             app:summary="@string/pure_theme_summary"
